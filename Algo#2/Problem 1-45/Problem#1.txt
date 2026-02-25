@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+
+
+void MultiTableHeader()
+{
+	cout << "\n\n\t\tMultiplication Table From 1 to 10\n\n\t" << endl;
+	for (int i = 1; i <=10; i++)
+		{
+			cout <<"      " << i << "\t";
+		}
+		cout << "\n------------------------------------------------------------------------------------------\n" << endl;
+
+}
+string ColoumSpecrator(int i)
+{
+	if (i<10)
+	{
+		return "  |";
+	}
+	else
+	{
+		return " |";
+	}
+
+
+}
+void horizontal()
+{
+		MultiTableHeader();
+	
+	for (int i = 1; i <=10; i++)
+	{
+		cout << " " << i << ColoumSpecrator(i);
+		for (int j=1;j<=10;j++)
+		{
+			cout << "	" << j*i << "    ";
+		}
+		cout << endl;
+	}
+
+}
+
+
+
+
+int main()
+{
+	
+	horizontal();
+	
+
+
+
+	return 0;
+}

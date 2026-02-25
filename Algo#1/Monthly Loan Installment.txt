@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int load_amount, monthly_statements;
+	cout << " ENter Load Amount";
+	cin >> load_amount;
+	cout << "Enter Mothly Amout ";
+	cin >> monthly_statements;
+	cout << load_amount / monthly_statements << "monthly ";
+
+
+
+
+
+
+	return 0;
+}

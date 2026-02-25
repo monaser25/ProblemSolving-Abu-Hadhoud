@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+int RandomNumber(int From ,int To)
+{
+
+	int RandNumber = rand() % (To - From + 1) + From;
+		return RandNumber;
+}
+void FillArray(int arr[], int arrlength)
+{
+
+	for (int  i = 0; i < arrlength; i++)
+	{
+		arr[i] = RandomNumber(1,100);
+	}
+}
+
+void ReverseArray(int arr[],int arr2[], int arrLength)
+{
+	int counter = arrLength-1;
+	for (int i = 0; i < arrLength; i++)
+	{
+			arr2[counter] = arr[i];
+			counter--;
+
+	}
+}
+void PrintArray(int arr[],int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		cout << arr[i] << " ";
+	}
+
+}
+int ReadNumber()
+{
+	int length;
+	cout << " Enter Number Of length " << endl;
+	cin >> length;
+	return length;
+}
+
+int main()
+{
+	srand((unsigned)time(NULL));
+	
+	int array[100],
+		arrLength = ReadNumber();
+	int array2[100];
+	FillArray(array, arrLength);
+
+	cout << "Array Before Reverse " << endl;
+	PrintArray(array, arrLength);
+	cout << "\nArray After Reverse " << endl;
+	ReverseArray(array, array2,arrLength);
+	PrintArray(array2, arrLength);
+	return 0;
+}

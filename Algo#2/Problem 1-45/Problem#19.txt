@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+
+int RandomNumber(int From, int To)
+{
+	int R_Number = rand() % (To-From+1)+From;
+	
+	return R_Number;
+}
+
+int main()
+{
+	srand((unsigned)time(NULL));
+
+	cout << RandomNumber(20,25);
+	
+	
+	return 0;
+}

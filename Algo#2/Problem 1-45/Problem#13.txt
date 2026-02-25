@@ -1,0 +1,44 @@
+#include <iostream> 
+#include <string> 
+using namespace std;
+int ReadPositiveNumber(string Message)
+{
+    int Number = 0;
+    do
+    {
+ 
+    cout << Message << endl;
+    cin >> Number;
+    } 
+    while (Number <= 0);
+    return Number;
+}
+void NumberPattern(int number)
+    {
+
+    for (int i = 1 ;i<=number;i++ )
+    {
+        for (int j =1 ;  j<=i ;j++ )
+        {
+            cout << i;
+        }
+
+
+        cout << endl;
+     
+    }
+
+    }
+
+void Printer()
+{
+
+}
+
+int main()
+{
+
+    NumberPattern(ReadPositiveNumber("Enter Plz"));
+   
+    return 0;
+}

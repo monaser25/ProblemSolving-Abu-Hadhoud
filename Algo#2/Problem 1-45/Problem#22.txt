@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+
+int ReadPostiveNumber()
+{
+	int number;
+	do
+	{
+		cout << "Enter Postive Number;" << endl;
+		cin >> number;
+	} while (number <0);
+
+	return number;
+}
+void ReadArray(int arr[],int &length)
+{
+	cout << "Enter Number oF Array " << endl;
+	cin >> length;
+	for (int i = 0; i < length; i++)
+	{
+		cout << "Elment [ " << i+1 << " ] : ";
+		cin >> arr[i];
+	}
+	cout << endl;;
+}
+
+void PrintArray(int arr[],int length)
+{
+
+	for (int i = 0; i < length; i++)
+	{
+		cout << arr[i];
+	}
+	cout << endl;
+}
+
+int TimeRepeated(int NumberToCheck,int arr[],int length)
+{
+	int counter = 0;
+
+	for (int  i = 0; i < length; i++)
+	{
+		if (NumberToCheck == arr[i])
+			counter++;
+	}
+
+	return counter;
+}
+
+int main()
+{
+
+	int arr[100], arrlength, NumberToCheck;
+	ReadArray(arr, arrlength);
+	NumberToCheck = ReadPostiveNumber();
+
+	cout << "original array is \n";
+	PrintArray(arr, arrlength);
+	cout << endl;
+
+	cout << "\n Number " << NumberToCheck;
+	cout << " IS Repeated ";
+	cout << TimeRepeated(NumberToCheck, arr, arrlength) << endl;
+
+	return 0;
+}

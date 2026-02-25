@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+
+enum enPrimOrNotPrime
+{	
+	Prime = 1,
+	NotPrime =2
+	
+};
+int ReadInput(string MSG)
+{
+	int Num = 0;
+	do
+	{	
+		cout << MSG << endl;
+		cin >> Num;
+
+	} while (Num<=0);
+	return Num;
+}
+enPrimOrNotPrime CheckNumIsPrim(int N)
+{
+	int M = round(N / 2);
+	for (int Counter = 2; Counter <= M; Counter++)
+	{
+		if (N%Counter==0)
+		{
+			return enPrimOrNotPrime::NotPrime;
+		}
+		
+	}
+	return enPrimOrNotPrime::Prime;
+}
+void Printer(int Num)
+{
+	for (int i = 1; i <= Num; i++)
+	{
+		if (CheckNumIsPrim(i)==enPrimOrNotPrime::Prime)
+		{
+			cout << i;
+		}
+		
+	}
+
+}
+int main()
+{
+	
+	Printer(ReadInput("Enter Postive Number Plz"));
+	return 0;
+}

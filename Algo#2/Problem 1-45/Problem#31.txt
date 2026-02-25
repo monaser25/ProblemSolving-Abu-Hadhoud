@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+void FillArray(int arr[], int arrlength)
+{
+
+	for (int  i = 0; i < arrlength; i++)
+	{
+		arr[i] = i + 1;
+	}
+}
+void Swap(int &Number1, int &Number2)
+{
+	int temp;
+	temp = Number1;
+	Number1 = Number2;
+	Number2 = temp;
+
+}
+int RandomNumber(int From ,int To)
+{
+	int ranNumber = rand()%(To - From + 1) + From;
+	return ranNumber;
+}
+void ShuffleArray(int arr[],int arrLength)
+{
+
+	for (int i = 0; i < arrLength; i++)
+	{
+		Swap(arr[RandomNumber(1, arrLength - 1)], arr[(1, arrLength - 1)]);
+	}
+}
+void PrintArray(int arr[],int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		cout << arr[i] << " ";
+	}
+
+}
+int ReadNumber()
+{
+	int length;
+	cout << " Enter Number Of length " << endl;
+	cin >> length;
+	return length;
+}
+
+int main()
+{
+	srand((unsigned)time(NULL));
+
+	int array[100],
+		arrLength = ReadNumber();
+	FillArray(array, arrLength);
+
+	cout << "Array Before Shuffle " << endl;
+	PrintArray(array, arrLength);
+	cout << "\nArray After Shuffle " << endl;
+	ShuffleArray(array, arrLength);
+	PrintArray(array, arrLength);
+	return 0;
+}

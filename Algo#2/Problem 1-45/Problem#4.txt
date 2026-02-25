@@ -1,0 +1,81 @@
+#include <iostream>
+
+using namespace std;
+
+enum enPerfectNumOrNot
+{	
+	Perfect = 1,
+	NotPerfect =2
+	
+};
+int ReadInput(string MSG)
+{
+	int Num = 0;
+	do
+	{	
+		cout << MSG << endl;
+		cin >> Num;
+
+	} while (Num<=0);
+	return Num;
+}
+
+
+
+bool Checker(int Input)
+{
+	int sum = 0;
+	for (int i = 1; i < Input; i++)
+	{
+		if (Input%i==0)
+		{
+			sum += i;
+		
+		}
+			
+	}
+		return Input==sum;
+}
+
+void Printer(int number)
+	{
+		
+	cout << "Numbers is : " << endl;
+	cout << number << endl;;
+
+	}
+void loop(int N)
+{
+	int number;
+	for (int i = 1; i < N; i++)
+	{
+		if (Checker(i))
+		{
+			number = i;
+			Printer (number);
+		}
+		
+	}
+		
+} 
+
+
+
+//void Printer(int perfect)
+//{
+//	if (perfect==1)
+//	{
+//		cout << "perfect";
+//	}
+//	else
+//		cout << "NOT";
+//	
+//}
+
+int main()
+{
+	int number = ReadInput("Enter Number");
+	loop(number);
+	
+	return 0;
+}

@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int ReadInput(string msg)
+{
+	int number;
+	do
+	{
+		cout << msg ;
+		cin >> number;
+	} while (number<=0);
+
+
+	return number;
+
+
+}
+
+int ReverseNumbers(int number,int digitfreq)
+{
+	int remainder = 0;
+	int number2 = 0;
+	int frequency=0;
+	while (number > 0)
+	{ 
+		remainder = number % 10;
+		number = number / 10;
+		if (remainder == digitfreq)
+		{
+			frequency++;
+		
+	
+		  }
+	}
+
+	return frequency;
+}
+
+void printer(int number)
+{
+
+	
+
+	for (int i = 0; i < 10; i++)
+	{
+		short digit = 0;
+		digit = ReverseNumbers(number, i);
+		if (digit >0)
+		{
+			cout << "Number " << i << "=" << digit << endl;;
+		}
+
+	}
+
+}
+int main()
+{
+	int number = ReadInput("Enter Plz");
+	printer(number);
+
+	return 0;
+}

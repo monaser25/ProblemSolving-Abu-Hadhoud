@@ -1,0 +1,21 @@
+#include <iostream>
+#include < cmath>
+using namespace std;
+
+int main()
+{
+	int d;
+	double area;
+	float pi = 3.14;
+
+	cout << "enter d\n";
+	cin >> d;
+	area = (pi * pow(d,2)) / 4;
+	cout << "area = " << ceil(area);
+
+
+
+
+
+	return 0;
+}

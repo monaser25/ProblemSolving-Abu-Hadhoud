@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+void mySumProcedure()
+{
+	int num1, num2;
+	cout << " Enter Number 1 " << endl;
+	cin >> num1;
+	cout << " Enter Number 1 " << endl;
+	cin >> num2;
+	cout << "******************\n";
+	cout << num1 + num2;
+}
+
+int mySumFunction()
+{
+	int num1, num2;
+	cout << " Enter Number 1 " << endl;
+	cin >> num1;
+	cout << " Enter Number 1 " << endl;
+	cin >> num2;
+	cout << "******************\n";
+	return num1 + num2;
+
+
+
+}
+int main()
+{
+	//mySumProcedure();
+	cout << mySumFunction();
+	
+	return 0;
+}

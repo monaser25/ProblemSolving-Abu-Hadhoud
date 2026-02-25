@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+
+
+int RandomNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+		return randNum;
+}
+void FillArrayWithRandomNumbers(int arr[],int &arrLength)
+{
+	cout << " Enter number of elements : \n";
+	cin >> arrLength;
+	for (int i = 0; i < arrLength; i++)
+	{
+		arr[i] = RandomNumber(1, 100);
+	}
+}
+
+void PrintArray(int arr[], int &arrLength)
+{
+
+	for (int i = 0; i < arrLength; i++)
+	{
+		cout << arr[i] <<" ";
+	}
+	cout << "\n";
+}
+int OddCount(int arr[], int arrLength)
+{
+	int counter = 0;
+
+	for (int i = 0; i < arrLength; i++)
+	{
+		if (arr[i] % 2 != 0)
+		{
+			counter++;
+		}
+	}
+
+	return counter;
+
+}
+
+
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[100], arrLength;
+
+	FillArrayWithRandomNumbers(arr, arrLength);
+
+	cout << "ArrayElement";
+	PrintArray(arr, arrLength);
+
+	cout << " ODD Count Is ";
+	cout << OddCount(arr,arrLength);
+
+	return 0;
+}

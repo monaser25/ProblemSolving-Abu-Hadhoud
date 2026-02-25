@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+
+
+int main()
+{
+	int loadAmout, mothlypayment;
+	cout << " Enter Load Amout \n";
+	cin >> loadAmout;
+	cout << " Enter Monthly payment \n";
+	cin >> mothlypayment;
+	cout << loadAmout / mothlypayment << " Months ";
+
+
+
+	return 0;
+}

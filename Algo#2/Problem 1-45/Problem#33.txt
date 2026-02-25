@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+
+int RandomNumber(int From ,int To)
+{
+
+	int RandNumber = rand() % (To - From + 1) + From;
+		return RandNumber;
+}
+
+
+string GenWord()
+{
+	string word = "";
+	for (int i = 0; i <= 4; i++)
+	{
+		word = word + (char)RandomNumber(65, 90);
+	}
+	return word;
+}
+string GenKey()
+{
+	string key = "";
+	key = GenWord() + "-";
+	key = key+GenWord()+ "-";
+	key = key+GenWord()+ "-";
+	key = key+GenWord();
+	return key;
+}
+void FillArrayWithKeys(string arr[], int arrlength)
+{
+
+	for (int i = 0; i < arrlength; i++)
+	{
+		arr[i] = GenKey();
+	}
+}
+void PrintArray(string arr[],int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+	{
+		cout << arr[i] << " \n";
+	}
+
+}
+int ReadNumber()
+{
+	int length;
+	cout << " Enter Number Of length " << endl;
+	cin >> length;
+	return length;
+}
+
+int main()
+{
+	srand((unsigned)time(NULL));
+	
+	string array[100];
+	int arrLength = ReadNumber();
+
+	FillArrayWithKeys(array, arrLength);
+
+	PrintArray(array, arrLength);
+	
+	return 0;
+}

@@ -1,0 +1,57 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+enum enFavColor
+{
+	red,Green,yellow,blue
+
+};
+
+enum engender
+{
+	Male,Female
+};
+enum enmarried_status
+{
+	Single,Married
+};
+struct stAddress
+{
+	string StreetName;
+	string POBOX;
+	string buildingno;
+	string ZipCode;
+
+};
+struct stContacts
+{
+	int Phone;
+	string Mail;
+	stAddress Address;
+};
+
+struct stPerson
+{
+	string FirstName;
+	string LastName;
+	int Age;
+	
+	stContacts Contacts;
+	enmarried_status married_status;
+	enFavColor favcolor;
+	engender gender;
+};
+
+int main()
+{
+
+	stPerson person1;
+	person1.FirstName = "ELMo";
+	person1.LastName = " MOO";
+	
+	
+		
+	return 0;
+}

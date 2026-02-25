@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+
+
+int main()
+{
+	double bill_value;
+	double total_bill;
+
+	cout << " Enter Bill ";
+	cin >> bill_value ;
+	total_bill = bill_value * 1.10;
+	total_bill += bill_value * 0.16;
+	cout << " Total Bill  =  " << total_bill ;
+
+
+
+
+	return 0;
+}

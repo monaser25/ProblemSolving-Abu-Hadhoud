@@ -1,0 +1,27 @@
+#include < iostream>
+using namespace std;
+
+int main()
+
+{
+	int seconds, days, hours, minuts ,remainder;
+
+
+	cout << "Enter Second ";
+	cin >> seconds;
+	days = seconds / 86400;
+	remainder = seconds % 86400;
+	hours = remainder / 3600;
+	remainder = remainder % 3600;
+	minuts = remainder / 60;
+	remainder = remainder % 60;
+	seconds = remainder;
+
+	cout << days << " : " << hours << " : " << minuts << " : " << seconds;
+
+
+
+
+
+	return 0;
+}

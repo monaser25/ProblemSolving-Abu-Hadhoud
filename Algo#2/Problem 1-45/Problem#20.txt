@@ -1,0 +1,52 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+enum enCharType
+{
+	SmallLetter=1,CapitalLetter=2,SpicalCharacter=3,Digit=4
+};
+
+int RandomNumber(int From, int To)
+{
+	int R_Number = rand() % (To-From+1)+From;
+	
+	return R_Number;
+}
+
+char GetRandomCharacter(enCharType charType)
+{
+	switch (charType)
+	{
+	case enCharType::SmallLetter:
+		return char(RandomNumber(97,122)) ;
+		break;
+	case enCharType::CapitalLetter:
+		return char(RandomNumber(65,91)) ;
+		break;
+	case enCharType::SpicalCharacter:
+		return char(RandomNumber(33,47)) ;
+		break;
+	case enCharType::Digit:
+		return  RandomNumber(48,57);
+		break;
+	default:
+		break;
+	}
+	
+	
+}
+
+int main()
+{
+	srand((unsigned)time(NULL));
+
+	cout << GetRandomCharacter(enCharType::SmallLetter)<<endl;
+	cout << GetRandomCharacter(enCharType::CapitalLetter)<<endl;
+	cout << GetRandomCharacter(enCharType::SpicalCharacter)<<endl;
+	cout << GetRandomCharacter(enCharType::Digit)<<endl;
+
+
+
+	return 0;
+}

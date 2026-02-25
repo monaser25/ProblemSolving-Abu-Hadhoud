@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+struct stuser_info
+{
+	string Name;
+	unsigned int Age;
+	string city;
+	string country;
+	unsigned int m_salary;
+	unsigned int y_salary;
+	char gender;
+	bool married;
+};
+
+int main()
+{
+	stuser_info user;
+	cout << " Enter your Name" << endl;
+	cin >> user.Name;
+	cout << " Enter your Age" << endl;
+	cin >> user.Age;
+	cout << " Enter your city " << endl;
+	cin >> user.city;
+	cout << " Enter your county " << endl;
+	cin >> user.country;
+	cout << " Enter your Monthly Salary" << endl;
+	cin >> user.m_salary;
+	cout << " Enter your Yearly Salary" << endl;
+	cin >> user.y_salary;
+	cout << " Enter your Gender" << endl;
+	cin >> user.gender;
+	cout << " are you married " << endl;
+	cin >> user.married;
+
+	cout << "********************";
+	cout << user.Name;
+	cout << user.Age;
+	cout << user.city;
+	cout << user.country;
+	cout << user.m_salary;
+	cout << user.y_salary;
+	cout << user.gender;
+	cout << user.married;
+	return 0;
+}

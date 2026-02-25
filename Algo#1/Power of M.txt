@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int n, m;
+	
+	cout << " Enter Number " << endl; 
+	cin >> n;
+	cout << " Enter Power of Number  " << endl;
+	cin >> m;
+	cout << pow(n, m);
+	return 0;
+}

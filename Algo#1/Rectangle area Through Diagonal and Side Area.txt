@@ -1,0 +1,17 @@
+#include < iostream>
+#include <cmath>
+using namespace std; 
+
+int main()
+{
+	double a, d, area;
+	cout << "Enter A " << endl  ;
+	cin >> a;
+	cout << "Enter D " << endl;
+	cin >> d;
+	area = a * sqrt(pow(d, 2) - pow(a, 2));
+	cout << area;
+
+
+	return 0;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+
+{
+	double l,area;
+	float pi = 3.14;
+
+	
+	cout << "enter l \n";
+		cin >> l;
+		area = pow(l * 2) / (4 * pi);
+		cout << "area = " << floor(area);
+
+
+
+
+
+	return 0;
+}

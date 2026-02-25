@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int ReadInput(string msg)
+{
+	int number;
+	do
+	{
+		cout << msg ;
+		cin >> number;
+	} while (number<=0);
+
+
+	return number;
+
+
+}
+
+void ReverseNumbers(int number)
+{
+	int remainder = 0;
+	while (number > 0)
+	{ 
+		remainder = number % 10;
+		number = number / 10;
+		cout << remainder;
+	}
+}
+
+int main()
+{
+	
+	ReverseNumbers(ReadInput("Enter Number \n"));
+
+	return 0;
+}

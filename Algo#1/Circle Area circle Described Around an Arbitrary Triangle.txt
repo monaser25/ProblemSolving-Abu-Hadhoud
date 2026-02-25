@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	double pi = 3.14;
+	double a, b, c, p, area;
+	cout << " Enter A " << endl; 
+	cin >> a;
+	cout << " Enter b " << endl;
+	cin >> b;
+	cout << " Enter c " << endl;
+	cin >> c;
+	p = (a + b + c) / 2;
+	area = pi*pow(((a * b * c) / (4 * sqrt((p * (p - a) * (p - b) * (p - c))))),2);
+	cout << round(area);
+	return 0;
+}

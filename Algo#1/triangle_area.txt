@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int base, highet, area;
+	cout << "enter highet and base ";
+	cin >> base >> highet;
+	area = .5 * base * highet;
+	cout << "area = " << area;
+
+
+
+
+	return 0;
+}

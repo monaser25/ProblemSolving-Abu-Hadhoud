@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+
+int main()
+{
+
+	string st1 = "43.22";
+	int N1 = 20;
+	double N2= 33.5;
+	float N3 = 55.23;
+	
+	int test1;
+	double test2;
+	float test3;
+	string test4;
+	string test5;
+	string test6;
+	int test7;
+
+	test1 = stoi(st1);
+	
+
+	test4 = to_string(N1);
+	test5 = to_string(N2);
+	test6 = to_string(N3);
+	test7 = (int)test3;
+	test7 = int(test3);
+	return 0;
+}
