@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8ce3f0ac-e9c4-4f59-87ef-73c29c357ca5}</ProjectGuid>
+    <ProjectGuid>{3fc2af23-af00-4a82-b44b-484cb2dda926}</ProjectGuid>
     <RootNamespace>MyFloor</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
