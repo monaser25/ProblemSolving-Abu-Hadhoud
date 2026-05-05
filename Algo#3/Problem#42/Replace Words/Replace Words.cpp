@@ -21,7 +21,7 @@ string ReplaceWordInString(string inputString, string StringToReplace, string Re
 	while (pos != std::string::npos)
 	{
 		inputString = inputString.replace(pos,StringToReplace.length(), ReplaceTO);
-		pos = inputString.find(StringToReplace);
+		pos = inputString.find(StringToReplace,pos+ReplaceTO.length());
 	}
 	return inputString;
 }
