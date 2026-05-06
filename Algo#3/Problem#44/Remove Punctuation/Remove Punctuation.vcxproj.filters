@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Replace Word (Custom).cpp">
+    <ClCompile Include="Remove Punctuation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

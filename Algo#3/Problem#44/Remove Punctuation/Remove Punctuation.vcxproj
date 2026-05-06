@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ab64fc7c-2085-4549-9eb4-6c12b07c982f}</ProjectGuid>
-    <RootNamespace>ReplaceWordCustom</RootNamespace>
+    <ProjectGuid>{f6fc6f24-514e-4a6d-9aeb-5afc0ef0ee0c}</ProjectGuid>
+    <RootNamespace>RemovePunctuation</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,7 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Replace Word (Custom).cpp" />
+    <ClCompile Include="Remove Punctuation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
